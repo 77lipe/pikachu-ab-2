@@ -23,10 +23,6 @@ a{
 }
 
 body{
-/* 100vh significa que o tamanho da tela vai ser completo */
-/* 100% É  a altura do pai */
- /* serve para chamar a cor no root */
- /* body é o pai de todos, tud que estiver aqui vai ser erdado */
     height: 100vh; 
     background-color: var(--primary-color); 
     display: flex;
@@ -130,4 +126,36 @@ footer{
     left: 50%;
     transform: translate(-50%, -50%);
     height: 75vh;
+}
+
+@media (max-width:960px) {
+    body {
+        padding-inline: 32px;
+        padding-bottom: 16px;
+    }
+    main{
+        justify-content: space-between;
+        align-items: center;
+    }
+    .container{
+        flex-direction: column;   
+        align-items:center ;
+        height: auto;
+        text-align: center;
+        gap: 16px;
+    }
+    .description{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 16px;
+    }
+    footer {
+        display: none;
+    }
+    .pikachu-img {
+        height: 60vh;
+    }
+
 }
